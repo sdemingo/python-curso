@@ -1,7 +1,7 @@
 
 
 
-# Introducción a Python
+# 1. Introducción a Python
 
 
 Python es un lenguaje de alto nivel de programación interpretado cuya filosofía
@@ -16,8 +16,9 @@ cómicos británicos, Monty Python.
 ## Sobre el entorno
 
 Este curso está preparado para ser impartido y seguido a través del servidor
-Hipatia. Hipatia es un servidor Linux público propiedad del IES Gaspar Melchor
-de Jovellanos de Fuenlabrada (Madrid). 
+Hipatia. En el servidor encontrarás los recursos necesarios para realizar el
+curso. No necesitas instalar ningún software o recurso en tu máquina local al
+margen de la aplicación para conectarte a Hipatia: PuTTy u otra similar.
 
 Para seguir de forma apropiada este curso te recomendamos que tengas, en todo
 momento accesible tanto este texto junto con un editor de texto con vuestros
@@ -40,6 +41,15 @@ cualquier documento en formato Markdown sino además navegar cómodamente entre
 ellos. Sitúate en el directorio principal del curso y ejecuta el comando `glow`
 para cargar todos los apuntes del curso.
 
+```
+$ cd /var/publico/sdemingo/python-curso
+$ glow
+```
+
+Usa `glow` para navegar cómodamente por todos los ficheros con extensión
+`.md`. Pulsando el intro podrás cargar el fichero y para volver al índice de
+ficheros del directorio, usa la tecla `←`. Para salir utiliza la tecla `q`.
+
 Durante el curso se supondrá que el usuario conoce los aspectos básicos del uso
 de Linux y de la consola de comandos del sistema. Si crees que no tienes todavía
 habilidad suficiente para manejarte por el sistema a través del uso de la
@@ -55,12 +65,16 @@ Todo el código con las soluciones de los ejercicios planteados y de los ejemplo
 propuestos se encuentra bajo el directorio `src` en este mismo directorio. 
 
 
+
+
 ## Licencia de uso y distribución
 
 Todo el material de este curso se encuentra licencia bajo las condiciones de la
 GNU General Public License Versión 3. El texto y la descripción de la licencia
 puede encontrarse en este mismo directorio, dentro del fichero llamado
 `LICENSE`.
+
+
 
 
 ## Primeros pasos
