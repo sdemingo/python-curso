@@ -167,15 +167,14 @@ print (cadena2)
 Existen muchos métodos para trabajar con string que podemos invocar sobre
 ellos. Os pongo a continuación una lista con los principales.
 
-|---------------------|------------------------------------------------------------------|
-| count()             | Returna el número de caracteres                                  |
-| endswith(sufijo)    | Retorna True si el sring termina por ese sufijo                  |
-| index(cadena)       | Retorna la posición de la primera aparición de la cadena buscada |
-| lower()             | Convierte el string a minúsculas                                 |
-| replace(cad1, cad2) | Remplaza las apariciones de la cadena cad1 por cad2              |
-| startswith()        | Retorna True si la cadena comienza por ese prefijo               |
-| strip(prefijo)      | Returns a trimmed version of the string                          |
-| upper()             | Convierte a mayúsculas                                           |
+* `count()`: Returna el número de caracteres 
+* `endswith(sufijo)`: Retorna True si el sring termina por ese sufijo 
+* `index(cadena)`: Retorna la posición de la primera aparición de la cadena buscada
+* `lower()`: Convierte el string a minúsculas 
+* `replace(cad1, cad2)`: Remplaza las apariciones de la cadena cad1 por cad2
+* `startswith()`: Retorna True si la cadena comienza por ese prefijo
+* `strip(prefijo)`: Returns a trimmed version of the string
+* `upper()`: Convierte a mayúsculas
 
 
 
