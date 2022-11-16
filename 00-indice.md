@@ -3,15 +3,16 @@
 
 # Índice de contenidos
 
+1. [Introducción a Python](01-intro.md)
 
-1. Introducción a Python
+2. [Variables y tipos básicos](02-variables.md)
 
-2. Variables y tipos básicos
+3. [Listas, tuplas y diccionarios](03-listas-tuplas-dict.md)
 
-3. Listas, tuplas y diccionarios (sin hacer)
+4. Instrucciones de control
 
-4. Instrucciones de control  (sin hacer)
+5. Funciones
 
-5. Funciones  (sin hacer)
+6. Entrada/Salida con ficheros
 
-6. Entrada/Salida con ficheros  (sin hacer)
+
