@@ -214,3 +214,11 @@ print (int(numero) + otro)
 
 1. Pide un número al usuario y calcula el triple mostrándolo por pantalla
    [Solución](src/triple.py)
+
+2. Pide al usuario que te introduzca su nombre y envía un mensaje a la pantalla
+   saludándole. Algo como "Hola Sergio, ¿qué tal estás?"
+   [Solución](src/saludo.py)
+   
+3. Pide al usuario que te introduzca una frase y cambia todas las apariciones de
+   las letras 'e' por 'E' y 'a' por 'A'.
+   [Solución](src/cambio_letras.py)
