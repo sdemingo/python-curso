@@ -1,2 +1,3 @@
-# python-curso
-Breve curso de python
+# Curso de python
+
+(en preparación)
