@@ -18,3 +18,15 @@ derecha la consola del sistema con la que podrás trabajar. Para cambiarte de un
 panel a otro pulsa `Control a + o`.
 
 Puedes informarte sobre `tmux` en [el manual](http://hipatia.iesjovellanos.org/tmux.html) de Hipatia.
+
+
+
+
+## Licencia de uso y distribución
+
+Todo el material de este curso se encuentra licencia bajo las condiciones de la
+GNU General Public License Versión 3. El texto y la descripción de la licencia
+puede encontrarse en este mismo directorio, dentro del fichero llamado
+[LICENSE](LICENSE).
+
+

@@ -62,16 +62,6 @@ propuestos se encuentra bajo el directorio [src](../src) en este repositorio.
 
 
 
-## Licencia de uso y distribución
-
-Todo el material de este curso se encuentra licencia bajo las condiciones de la
-GNU General Public License Versión 3. El texto y la descripción de la licencia
-puede encontrarse en este mismo directorio, dentro del fichero llamado
-[LICENSE](../LICENSE).
-
-
-
-
 ## Primeros pasos
 
 Python es un lenguaje interpretado. Esto quiere decir que el programa que tu
@@ -80,6 +70,15 @@ externo sino que será leído y procesado por un intérprete de Python. Para que
 sistema ejecute las instrucciones de tu programa no vale con indicarle que
 quieres ejecutarlo. A quien realmente ejecutas es al intérprete de Python, y es
 a el, a quien le dices que lea tu programa. Ahora veremos como hacer esto.
+
+Antes de empezar dejaremos claro lo que es un *programa*. Un programa no es más
+que un conjunto de instrucciones que el ordenador ejecutará de forma
+secuencial. Desde la primera a la última. Para escribir programas la herramienta
+básica es un editor de texto. En un editor de texto podrás ir escribiendo una a
+una las instrucciones que quieres que formen parte de tu programa. Tu programa,
+además de instrucciones manejará también datos. Estos datos pueden ser
+introducidos por el usuario o datos internos del propio programa. En la unidad
+siguiente hablaremos de como se manejan los datos de un programa.
 
 Vamos a crear nuestro primer programa en Python. Utiliza tu editor de textos
 favorito para crear el fichero `hola.py`. Por ejemplo, ejecuta sobre un
