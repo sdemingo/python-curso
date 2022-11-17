@@ -29,6 +29,8 @@ tipo. Incluso podría estar compuesta por un dato de tipo lista a su vez:
     numerosYmas = [4, -2, "hola", 953, True, "si"]
 
     listaDelistas= [4, -2, [ 9, 8, 2], "ultimo"]
+    
+    listaVacia = []
 ```
 
 En el ejemplo anterior vemos que el tercer elemento de `listaDelistas` es una
@@ -161,6 +163,9 @@ operador `in` igual que con las listas:
 ```
     print ( "Madrid" in temperaturas) // imprime True
 ```
+
+Si queremos crear un diccionario vacío usaremos las llaves sin valores en su
+interior. Algo como `dicVacio = {}`.
 
 
 ## Ejercicios

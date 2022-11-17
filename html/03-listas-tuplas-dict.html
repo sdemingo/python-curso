@@ -28,7 +28,9 @@
 <p>Una lista puede estar compuesta, como ya hemos dicho, por datos de diferente tipo. Incluso podría estar compuesta por un dato de tipo lista a su vez:</p>
 <pre><code>    numerosYmas = [4, -2, &quot;hola&quot;, 953, True, &quot;si&quot;]
 
-    listaDelistas= [4, -2, [ 9, 8, 2], &quot;ultimo&quot;]</code></pre>
+    listaDelistas= [4, -2, [ 9, 8, 2], &quot;ultimo&quot;]
+    
+    listaVacia = []</code></pre>
 <p>En el ejemplo anterior vemos que el tercer elemento de <code>listaDelistas</code> es una lista. Para acceder a los elementos de una lista usaremos el operador <code>[</code> <code>]</code>. Usaremos el nombre de la lista seguido de dicho operador y entre los corchetes meteremos el índice de la lista que queremos consultar. <strong>Es muy importante tener en cuenta que los índices siempre empiezan en 0</strong>. Por lo que si queremos consultar el tercer elemento de una lista hemos de usar el índice <code>2</code>. Por ejemplo, para imprimir por pantalla el cuarto elemento de <code>numerosYmas</code> escribiremos <code>print(numerosYmas[5])</code>. En caso de que el índice sea negativo, el acceso será contando desde el final de la lista. Esto es desde la derecha. Usando un índice de <code>-1</code> nos llevará al último elemento de la lista.</p>
 <p>El acceso a los miembros de una lista puede ser para su consulta o para su modificación. Piensa en el siguiente código:</p>
 <pre><code>    print (numerosYmas[5])   // imprime &quot;si&quot;
@@ -69,6 +71,7 @@
     print (temperaturas[&quot;León&quot;])       // imprime 14</code></pre>
 <p>Para saber si existe un valor asociado a una clave en un diccionario usaremos el operador <code>in</code> igual que con las listas:</p>
 <pre><code>    print ( &quot;Madrid&quot; in temperaturas) // imprime True</code></pre>
+<p>Si queremos crear un diccionario vacío usaremos las llaves sin valores en su interior. Algo como <code>dicVacio = {}</code>.</p>
 <h2 id="ejercicios">Ejercicios</h2>
 <ol type="1">
 <li>Crea una lista que contenga varios nombres a tu elección. Pide al usuario un nombre por teclado y muestra por pantalla si es cierto o no que ese nombre está en la lista. <a href="src/nombres.py">Solución</a></li>
