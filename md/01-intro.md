@@ -24,7 +24,7 @@ Para seguir de forma apropiada este curso te recomendamos que tengas, en todo
 momento accesible tanto este texto junto con un editor de texto con vuestros
 códigos de pruebas y una consola del sistema donde poder ir probándolo
 todo. Para conseguir este entorno puede resultarte muy útil usar la herramienta
-`termux` instalada en el sistema. Te recomendamos encarecidamente que si no
+`tmux` instalada en el sistema. Te recomendamos encarecidamente que si no
 estás familiarizado con esta herramientas acudas al manual del servidor y
 aprendas a usarla para poder tener abiertos estos tres recursos permanentemente
 durante tu sesión en Hipatia. Puedes informarte sobre esta herramienta en:
@@ -34,21 +34,20 @@ durante tu sesión en Hipatia. Puedes informarte sobre esta herramienta en:
 Respecto al editor que puedes usar para escribir tu código, te recomendamos
 `nano` si no tienes experiencia con otro editor. 
 
-Para leer cómodamente estos apuntes en formato Markdown puedes usar cualquier
-editor de texto, el comando `less` o la opción que recomendamos es el comando
-`glow`. Esta herramienta te permite no solo visualizar de forma colorista
-cualquier documento en formato Markdown sino además navegar cómodamente entre
-ellos. Sitúate en el directorio principal del curso y ejecuta el comando `glow`
-para cargar todos los apuntes del curso.
+Para leer cómodamente estos apuntes en formato HTML puedes usar cualquier
+navegador en entorno de terminal pero en Hipatia tienes instalado uno llamado
+`w3m`. Dentro del directorio principal del curso encontrarás un fichero llamado
+`index.html`. Ábrelo con este navegador y podrás empezar a navegar por el curso:
 
 ```
 $ cd /var/publico/sdemingo/python-curso
-$ glow
+$ w3m index.html
 ```
 
-Usa `glow` para navegar cómodamente por todos los ficheros con extensión
-`.md`. Pulsando el intro podrás cargar el fichero y para volver al índice de
-ficheros del directorio, usa la tecla `←`. Para salir utiliza la tecla `q`.
+Si no estás familiarizado con `w3m` puedes ojear nuestra página de manual con la
+información más básica sobre este navegador en:
+
+    http://hipatia.iesjovellanos.org/w3m.html
 
 Durante el curso se supondrá que el usuario conoce los aspectos básicos del uso
 de Linux y de la consola de comandos del sistema. Si crees que no tienes todavía
