@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>03-listas-tuplas-dict</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+</head>
+<body>
+<h1 id="listas-tuplas-y-diccionarios">3. Listas, tuplas y diccionarios</h1>
+<p>Además de los tipos básicos, en Python tenemos tipos más complejos con los que vamos a poder trabajar. Los tipos “avanzados” que vamos a ver en primer lugar serían:</p>
+<ul>
+<li>Las listas</li>
+<li>Las tuplas</li>
+<li>Los diccionarios</li>
+</ul>
+<h2 id="las-listas">Las listas</h2>
+<p>En Python una lista es una colección de datos que se agrupan todos bajo un mismo identificador o nombre de variable. Estos datos pueden ser del mismo tipo o de tipos diferentes.</p>
+<p>Por ejemplo, vamos a guardar cinco números enteros asociados a una sola variable, en lugar de utilizar una para cada uno de ellos:</p>
+<pre><code>numeros = [4,2,23,112,-5]</code></pre>
+<p>Una lista puede estar compuesta, como ya hemos dicho, por datos de diferente tipo. Incluso podría estar compuesta por un dato de tipo lista a su vez:</p>
+<pre><code>numerosYmas = [4, -2, &quot;hola&quot;, 953, True, &quot;si&quot;]
+
+listaDelistas= [4, -2, [ 9, 8, 2], &quot;ultimo&quot;]</code></pre>
+<p>En el ejemplo anterior vemos que el tercer elemento de <code>listaDelistas</code> es una lista. Para acceder a los elementos de una lista usaremos el operador <code>[</code> <code>]</code>. Usaremos el nombre de la lista seguido de dicho operador y entre los corchetes meteremos el índice de la lista que queremos consultar. <strong>Es muy importante tener en cuenta que los índices siempre empiezan en 0</strong>. Por lo que si queremos consultar el tercer elemento de una lista hemos de usar el índice <code>2</code>. Por ejemplo, para imprimir por pantalla el cuarto elemento de <code>numerosYmas</code> escribiremos <code>print(numerosYmas[5])</code>. En caso de que el índice sea negativo, el acceso será contando desde el final de la lista. Esto es desde la derecha. Usando un índice de <code>-1</code> nos llevará al último elemento de la lista.</p>
+<p>El acceso a los miembros de una lista puede ser para su consulta o para su modificación. Piensa en el siguiente código:</p>
+<pre><code>print (numerosYmas[5])   // imprime &quot;si&quot;
+numerosYmas[5]=&quot;no&quot;
+print (numerosYmas[5])   // imprime &quot;no&quot;</code></pre>
+<p>Para añadir miembros a una lista podemos usar el operador <code>+</code> pero hemos de tener en cuenta que los datos de ambos lados del operador deben ser listas. Vamos a añadir un valor de <code>2</code> a la lista <code>numerosYmas</code> y lo haremos convirtiendo el <code>2</code> e una lista:</p>
+<pre><code>numerosYmas = numerosYmas + [2]</code></pre>
+<p>También podemos hacer uso del método <code>append()</code> sobre la variable de tipo lista ejecutando <code>numerosYmas.append(2)</code>. El resultado sería similar.</p>
+<p>Para eliminar elementos de una lista usaremos la instrucción <code>del</code> seguido del elemento que queremos borrar. Por ejemplo:</p>
+<pre><code>numeros = [10, 20, 30, 40]
+del numeros[1]
+print (numeros)    //imprime [10, 30, 40]</code></pre>
+<p>De una lista podemos extraer otra usando el operador <code>[:]</code>. Es lo que se llama rodaja o <em>slice</em> en Inglés. Este operador recibe dos enteros que indican los índices de inicio y de fin de nuestra rodaja Rodajas de listas [:]. El primer índice siempre forma parte de la rodaja mientras que el último nunca hará. La rodaja termina en el anterior a este. Si no indicamos el inicio de la rodaja está toma el inicio de la lista origen y lo mismo pasa con el final y el segundo índice.</p>
+<pre><code>lista = [10, 20, 30, 40, 50, 60]
+print (lista[1:])     // imprime [20, 30, 40, 50, 60]
+print (lista[:3])     // imprime [10, 20, 30]
+print (lista[1:4])    // imprime [20, 30, 40]</code></pre>
+<p>Conocer si un valor está o no en una lista puede ser muy útil. Esto nos lo permite el operador <code>in</code>. Con este operador obtendremos un valor booleano que nos indique si el valor está o no:</p>
+<pre><code>lista = [10, 20, 30, 40, 50, 60]
+print (10 in lista)     // imprime True
+print (80 in lista)     // imprime False</code></pre>
+<p>Por último, para saber la longitud o número de miembros de una lista usaremos el método <code>len()</code> que invocaremos directamente sobre la variable lista que queramos.</p>
+<h2 id="las-tuplas">Las tuplas</h2>
+<p>(En proceso …)</p>
+<h2 id="los-diccionarios">Los diccionarios</h2>
+<p>(En proceso …)</p>
+<h2 id="ejercicios">Ejercicios</h2>
+<ol type="1">
+<li>Crea una lista que contenga varios nombres a tu elección. Pide al usuario un nombre por teclado y muestra por pantalla si es cierto o no que ese nombre está en la lista. <a href="src/nombres.py">Solución</a></li>
+</ol>
+</body>
+</html>
