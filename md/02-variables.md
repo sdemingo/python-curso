@@ -16,17 +16,17 @@ siempre. Por ejemplo, vamos a guardar dos datos numéricos en sendas variables y
 luego mostraremos el resultado de su suma:
 
 ```
-variable1 = 8
-variable2 = 9
-print (variable1 + variable2)
+    variable1 = 8
+    variable2 = 9
+    print (variable1 + variable2)
 ```
 
 Si guardamos este código en un fichero llamado `variables.py` y lo ejecutamos
 obtendremos por pantalla el resultado de esa suma:
 
 ```
-$ python3 variables.py
-17
+    $ python3 variables.py
+    17
 ```
 
 Como se ve, una vez que hemos asignado los valores numéricos a sus respectivos
@@ -53,10 +53,10 @@ vemos un ejemplo de creación de una variable de cada uno de los tipos descritos
 arriba.
 
 ```
-varEntera=784
-varReal=345.23
-varBooleana=False
-varCadena="esto es una cadena"
+    varEntera=784
+    varReal=345.23
+    varBooleana=False
+    varCadena="esto es una cadena"
 ```
 
 Para operar con variables será necesario que estas sean del mismo tipo. Para
@@ -68,16 +68,16 @@ Por ejemplo, imagina que hemos declarado una variable de tipo string con la
 cadena de caracteres `"834"` y la queremos sumar un valor numérico de `9`.
 
 ```
-entero=9
-cadena="834"
-print (entero + cadena)
+    entero=9
+    cadena="834"
+    print (entero + cadena)
 ```
 
 Si ejecutamos el código anterior el intérprete nos lanzará un error a la
 pantalla que termina con el texto:
 
 ```
-TypeError: unsupported operand type(s) for +: 'int' and 'str'
+    TypeError: unsupported operand type(s) for +: 'int' and 'str'
 ```
 
 Nos está indicando que no podemos operar usando el operador aritmético de suma
@@ -87,15 +87,15 @@ la primera opción usando la expresión `str(entero)` para convertir el `9` en u
 cadena de caracteres.
 
 ```
-entero=9
-cadena="834"
-print (str(entero) + cadena)
+    entero=9
+    cadena="834"
+    print (str(entero) + cadena)
 ```
 
 Ejecutamos el código anterior y obtenemos:
 
 ```
-9834
+    9834
 ```
 
 ¿Como? Esa no es la suma que esperábamos. Realmente el código anterior es
@@ -113,9 +113,9 @@ numérico veremos que el resultado es la suma aritmética que esperábamos
 inicialmente, esto es el valor numérico `843`.
 
 ```
-entero=9
-cadena="834"
-print (entero + int(cadena))
+    entero=9
+    cadena="834"
+    print (entero + int(cadena))
 ```
 
 ## Operadores 
@@ -158,10 +158,10 @@ usaremos la función `upper()`. La invocaremos sobre la variable de tipo string 
 guardaremos el resultado en una segunda variable:
 
 ```
-cadena1="Esto es una cadena"
-cadena2 = cadena.upper()
-print (cadena1)
-print (cadena2)
+    cadena1="Esto es una cadena"
+    cadena2 = cadena.upper()
+    print (cadena1)
+    print (cadena2)
 ```
 
 Existen muchos métodos para trabajar con string que podemos invocar sobre
@@ -191,7 +191,7 @@ Luego recogeremos el valor introducido en una variable tal y como se muestra en
 el ejemplo siguiente:
 
 ```
-numero = input("Introduce un número cualquiera: ")
+    numero = input("Introduce un número cualquiera: ")
 ```
 
 Es importante indicar que la función `input` siempre retorna un string y si
@@ -202,9 +202,9 @@ El siguiente programa pide un número al usuario y le suma otro que aporta el
 propio programa:
 
 ```
-numero = input("Introduce un número cualquiera: ")
-otro = 8
-print (int(numero) + otro)
+    numero = input("Introduce un número cualquiera: ")
+    otro = 8
+    print (int(numero) + otro)
 ```
 
 

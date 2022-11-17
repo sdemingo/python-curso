@@ -19,26 +19,23 @@
 <p>Python es un lenguaje de alto nivel de programación interpretado cuya filosofía hace hincapié en la legibilidad de su código. Su curva de aprendizaje es muy amigable y por eso se hace ideal para enseñar a programar a gente que nunca ha tenido contacto con ningún otro lenguaje de programación. Surge a finales de los años 80 en un centro de investigación de Países Bajos. Creado por Guido van Rossum y, como muchos sospecharán, su nombre viene del archiconocido grupo de cómicos británicos, Monty Python.</p>
 <h2 id="sobre-el-entorno">Sobre el entorno</h2>
 <p>Este curso está preparado para ser impartido y seguido a través del servidor Hipatia. En el servidor encontrarás los recursos necesarios para realizar el curso. No necesitas instalar ningún software o recurso en tu máquina local al margen de la aplicación para conectarte a Hipatia: PuTTy u otra similar.</p>
-<p>Para seguir de forma apropiada este curso te recomendamos que tengas, en todo momento accesible tanto este texto junto con un editor de texto con vuestros códigos de pruebas y una consola del sistema donde poder ir probándolo todo. Para conseguir este entorno puede resultarte muy útil usar la herramienta <code>tmux</code> instalada en el sistema. Te recomendamos encarecidamente que si no estás familiarizado con esta herramientas acudas al manual del servidor y aprendas a usarla para poder tener abiertos estos tres recursos permanentemente durante tu sesión en Hipatia. Puedes informarte sobre esta herramienta en:</p>
-<pre><code>http://hipatia.iesjovellanos.org/tmux.html</code></pre>
+<p>Para seguir de forma apropiada este curso te recomendamos que tengas, en todo momento accesible tanto este texto junto con un editor de texto con vuestros códigos de pruebas y una consola del sistema donde poder ir probándolo todo. Para conseguir este entorno puede resultarte muy útil usar la herramienta <code>tmux</code> instalada en el sistema. Te recomendamos encarecidamente que si no estás familiarizado con esta herramientas acudas al manual del servidor y aprendas a usarla para poder tener abiertos estos tres recursos permanentemente durante tu sesión en Hipatia. Incluso en la misma pantalla, lo que te permitirá mucha más funcionalidad. Puedes informarte sobre <code>tmux</code> en <a href="http://hipatia.iesjovellanos.org/tmux.html">el manual de Hipatia</a>.</p>
 <p>Respecto al editor que puedes usar para escribir tu código, te recomendamos <code>nano</code> si no tienes experiencia con otro editor.</p>
 <p>Para leer cómodamente estos apuntes en formato HTML puedes usar cualquier navegador en entorno de terminal pero en Hipatia tienes instalado uno llamado <code>w3m</code>. Dentro del directorio principal del curso encontrarás un fichero llamado <code>index.html</code>. Ábrelo con este navegador y podrás empezar a navegar por el curso:</p>
-<pre><code>$ cd /var/publico/sdemingo/python-curso
-$ w3m index.html</code></pre>
-<p>Si no estás familiarizado con <code>w3m</code> puedes ojear nuestra página de manual con la información más básica sobre este navegador en:</p>
-<pre><code>http://hipatia.iesjovellanos.org/w3m.html</code></pre>
-<p>Durante el curso se supondrá que el usuario conoce los aspectos básicos del uso de Linux y de la consola de comandos del sistema. Si crees que no tienes todavía habilidad suficiente para manejarte por el sistema a través del uso de la terminal te recomendamos que pospongas este curso y dediques unos días a manejarte por Hipatia usando los comandos básicos. En el manual online que tenemos publicado en nuestra web podrás encontrar información útil para este aprendizaje:</p>
-<pre><code>http://hipatia.iesjovellanos.org/ayuda-index.html</code></pre>
-<p>Todo el código con las soluciones de los ejercicios planteados y de los ejemplos propuestos se encuentra bajo el directorio <code>src</code> en este mismo directorio.</p>
+<pre><code>    $ cd /var/publico/sdemingo/python-curso
+    $ w3m index.html</code></pre>
+<p>Si no estás familiarizado con <code>w3m</code> puedes ojear <a href="http://hipatia.iesjovellanos.org/w3m.html">nuestra página de manual</a> con la información más básica sobre este navegador.</p>
+<p>Durante el curso se supondrá que el usuario conoce los aspectos básicos del uso de Linux y de la consola de comandos del sistema. Si crees que no tienes todavía habilidad suficiente para manejarte por el sistema a través del uso de la terminal te recomendamos que pospongas este curso y dediques unos días a manejarte por Hipatia usando los comandos básicos. En el <a href="http://hipatia.iesjovellanos.org/ayuda-index.html">manual online</a> que tenemos publicado en nuestra web podrás encontrar información útil para este aprendizaje:</p>
+<p>Todo el código con las soluciones de los ejercicios planteados y de los ejemplos propuestos se encuentra bajo el directorio <a href="../src">src</a> en este repositorio.</p>
 <h2 id="licencia-de-uso-y-distribución">Licencia de uso y distribución</h2>
-<p>Todo el material de este curso se encuentra licencia bajo las condiciones de la GNU General Public License Versión 3. El texto y la descripción de la licencia puede encontrarse en este mismo directorio, dentro del fichero llamado <code>LICENSE</code>.</p>
+<p>Todo el material de este curso se encuentra licencia bajo las condiciones de la GNU General Public License Versión 3. El texto y la descripción de la licencia puede encontrarse en este mismo directorio, dentro del fichero llamado <a href="../LICENSE">LICENSE</a>.</p>
 <h2 id="primeros-pasos">Primeros pasos</h2>
 <p>Python es un lenguaje interpretado. Esto quiere decir que el programa que tu escribirás en un fichero de texto no será transformado por ningún programa externo sino que será leído y procesado por un intérprete de Python. Para que el sistema ejecute las instrucciones de tu programa no vale con indicarle que quieres ejecutarlo. A quien realmente ejecutas es al intérprete de Python, y es a el, a quien le dices que lea tu programa. Ahora veremos como hacer esto.</p>
 <p>Vamos a crear nuestro primer programa en Python. Utiliza tu editor de textos favorito para crear el fichero <code>hola.py</code>. Por ejemplo, ejecuta sobre un directorio en el que tengas permisos (por ejemplo tu directorio personal) el comando <code>nano hola.py</code> y escribe dentro la instrucción:</p>
-<pre><code>print (&quot;hola mundo!&quot;)</code></pre>
+<pre><code>    print (&quot;hola mundo!&quot;)</code></pre>
 <p>Guarda los cambios y sal del editor de nuevo a tu consola. Para lanzar tu programa deberás lanzar el intérprete y pasarle como argumento el nombre de tu programa:</p>
-<pre><code>$ python3 hola.py
-hola mundo!</code></pre>
+<pre><code>    $ python3 hola.py
+    hola mundo!</code></pre>
 <p>El resultado se mostrará inmediatamente. Tu programa o <em>script</em> ha sido ejecutado con éxito. Ya eres programador de Python ;)</p>
 </body>
 </html>
