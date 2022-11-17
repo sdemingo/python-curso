@@ -9,7 +9,7 @@
 
 3. [Listas, tuplas y diccionarios](03-listas-tuplas-dict.html)
 
-4. Instrucciones de control
+4. [Instrucciones de control](04-inst-control.html)
 
 5. Funciones
 
