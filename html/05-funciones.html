@@ -45,30 +45,30 @@
 <p>En ambos casos se convierte la lista a mayúsculas usando la función <code>mayus</code>. Esta función se ejecutará dos veces y en cada caso, la variable o parámetro <code>lista</code> se convertirá en una lista diferente. En la primera invocación, <code>lista</code> será realmente <code>animales</code>. Mientras que en la segunda, <code>lista</code> será <code>personas</code>.</p>
 <p>Puedes ver todo este ejemplo completo en el fichero <a href="../src/mayusculas.py">mayusculas.py</a>.</p>
 <p>Podemos declarar funciones con un número mayor de parámetros y en ese caso, en la invocación hemos de respetar el orden de esos parámetros para que la asignación sea correcta:</p>
-<pre><code>def ejemplo(indice, palabra, bool):
-    print (&quot;El indice vale &quot;+str(indice))
-    print (&quot;La palabra vale &quot;+palabra)
-    print (&quot;El booleano vale &quot;+str(bool))
+<pre><code>    def ejemplo(indice, palabra, bool):
+        print (&quot;El indice vale &quot;+str(indice))
+        print (&quot;La palabra vale &quot;+palabra)
+        print (&quot;El booleano vale &quot;+str(bool))
 
 
-// Ejemplos de declaración:
+    // Ejemplos de declaración:
 
-ejemplo (9, &quot;hola&quot;, False)
-ejemplo (-4, &quot;adios&quot;, True)
-ejemplo (321, &quot;buenas&quot;, True)</code></pre>
+    ejemplo (9, &quot;hola&quot;, False)
+    ejemplo (-4, &quot;adios&quot;, True)
+    ejemplo (321, &quot;buenas&quot;, True)</code></pre>
 <h2 id="valores-de-retorno">Valores de retorno</h2>
 <p>Una función, además de realizar una serie de operaciones puede retornar un valor a quien la invoca. Este valor puede ser útil para saber como ha ido el trabajo de la función o para recuperar un dato que ella ha generado. Este valor retornado puede ser de cualquier tipo: entero, string, tupla, lista, ….</p>
 <p>Para que una función retorne un valor usaremos la instrucción <code>return</code> y hemos de tener en cuenta que cuando esta instrucción se ejecute, la ejecución de la función finaliza. Nunca pongas ninguna instrucción que pertenezca a la función bajo un <code>return</code> pues nunca será ejecutada.</p>
 <p>Veamos un ejemplo. Vamos a crear una instrucción que recibe un número entero como parámetro y construye y retorna una lista de los números pares hasta ese número:</p>
-<pre><code>def construyePares(limite):
-    pares=[]
-    for i in range(1, limite+1):
-        if (i % 2 == 0):
-            pares.append(i)
+<pre><code>    def construyePares(limite):
+        pares=[]
+        for i in range(1, limite+1):
+            if (i % 2 == 0):
+                pares.append(i)
             
-    return pares</code></pre>
+        return pares</code></pre>
 <p>Para recuperar el valor retornado por la lista usaremos una variable junto con su invocación de la siguiente manera:</p>
-<pre><code>listaPares = construyePares(10)</code></pre>
+<pre><code>    listaPares = construyePares(10)</code></pre>
 <p>Ahora tendremos una lista llamada <code>listaPares</code> construida dentro de la función y retornada por esta que tiene la forma <code>[2, 4, 6, 8, 10]</code></p>
 <h2 id="ejercicios">Ejercicios</h2>
 <ol type="1">

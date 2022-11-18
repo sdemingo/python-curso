@@ -96,17 +96,17 @@ la invocación hemos de respetar el orden de esos parámetros para que la
 asignación sea correcta:
 
 ```
-def ejemplo(indice, palabra, bool):
-    print ("El indice vale "+str(indice))
-    print ("La palabra vale "+palabra)
-    print ("El booleano vale "+str(bool))
+    def ejemplo(indice, palabra, bool):
+        print ("El indice vale "+str(indice))
+        print ("La palabra vale "+palabra)
+        print ("El booleano vale "+str(bool))
 
 
-// Ejemplos de declaración:
+    // Ejemplos de declaración:
 
-ejemplo (9, "hola", False)
-ejemplo (-4, "adios", True)
-ejemplo (321, "buenas", True)
+    ejemplo (9, "hola", False)
+    ejemplo (-4, "adios", True)
+    ejemplo (321, "buenas", True)
 ```
 
 ## Valores de retorno
@@ -126,13 +126,13 @@ como parámetro y construye y retorna una lista de los números pares hasta ese
 número:
 
 ```
-def construyePares(limite):
-    pares=[]
-    for i in range(1, limite+1):
-        if (i % 2 == 0):
-            pares.append(i)
+    def construyePares(limite):
+        pares=[]
+        for i in range(1, limite+1):
+            if (i % 2 == 0):
+                pares.append(i)
             
-    return pares
+        return pares
 ```
 
 
@@ -140,7 +140,7 @@ Para recuperar el valor retornado por la lista usaremos una variable junto con
 su invocación de la siguiente manera:
 
 ```
-listaPares = construyePares(10)
+    listaPares = construyePares(10)
 ```
 
 Ahora tendremos una lista llamada `listaPares` construida dentro de la función y
