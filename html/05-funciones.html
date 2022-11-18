@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>05-funciones</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+</head>
+<body>
+<h1 id="funciones">5. Funciones</h1>
+<p>Las funciones en programación se utilizan para agrupar bloques de código bajo un nombre. Esta técnica permite a los programadores reutilizar estos bloques siempre que quieran sin necesidad de volver a escribirlos, usando solo el nombre del bloque para referirse a ellos.</p>
+<pre><code>    def saludo():
+        nombre = input(&quot;Escribe tu nombre: &quot;)
+        print (&quot;Hola &quot;+nombre+&quot;, ¿cómo estás?&quot;)</code></pre>
+<p>Por ejemplo, en el recuadro anterior hemos creado una función llamada <code>saludo</code> que pida al usuario su nombre y le salude. A esto se le suele llamar <strong>declarar una función</strong>. Tras declararla usando la palabra <code>def</code>, la podremos usar en cualquier parte de nuestro programa usando solo el nombre de la función seguido de <code>()</code>.</p>
+<pre><code>    saludo()</code></pre>
+<p>A esto se le llama <strong>invocar o llamar a una función</strong>. Podremos crear tantas funciones como queramos y estas pueden contener en su interior las instrucciones que necesitemos. La creación de funciones que agrupen los pequeños problemas que conforman el problema general que quieres solucionar, es la piedra angular de la programación.</p>
+<h2 id="uso-de-parámetros">Uso de parámetros</h2>
+<p>Cuando invocas a una función existe la posibilidad de pasarme diferentes parámetros con información. Esto permite a la función realizar tareas con datos que no están “en su interior” sino que vienen de fuera, del código llamante. Puede sonar complejo pero en realidad no lo es. Veamos esto con un ejemplo. Hemos creado una función llamada <code>mayus</code> que recibe una lista de palabras. Como le haremos llegar esta lista a la función en el momento de su invocación todavía no nos preocupa. El caso es que <code>mayus</code> recibe una lista y la recorre convirtiendo las palabras de esta lista en mayúscula. Veamos el código de su declaración:</p>
+<pre><code>    def mayus(lista):
+        i=0
+        while i&lt;len(lista):
+            lista[i] = lista[i].upper()
+            i=i+1
+</code></pre>
+<p>el código de <code>mayus</code> es sencillo. Declara una variable numérica <code>i</code> como 0 y usa una instrucción <code>while</code> para ejecutar su bloque de instrucciones tantas veces como elementos haya en la lista. Por eso la expresión asociada a <code>while</code> es <code>i&lt;len(lista)</code>. En cada ejecución del bucle se accede la palabra de la lista que ocupa esa posición: primero la palabra 0, luego la 1, luego 2, etc. Y se le asigna un nuevo valor: el de esa misma palabra pero transformada en mayúsculas gracias al método <code>upper()</code>. Por último incrementamos <code>i</code> en uno y ejecutamos el bucle una vez más. No nos importa lo larga o corta que sea la lista, la recorreremos siempre igual gracias a la instrucción <code>while</code>.</p>
+<p>Pero ¿de donde sale la lista?. La lista no está declarada en el anterior código. La lista nos llegará cuando se invoque a la función <code>mayus</code>. En ese momento, en el de la invocación o llamada, será cuando se asigne valor al parámetro lista.</p>
+<p>Veamos un ejemplo de como llamaríamos a esta función. Crearemos dos listas diferentes y para convertirlas a ambas a mayúsculas usaremos la función declarada previamente:</p>
+<pre><code>    animales = [&quot;perro&quot;, &quot;gato&quot;, &quot;ratón&quot;, &quot;tortuga&quot;]
+    personas = [&quot;sergio&quot;, &quot;luis&quot;, &quot;marta&quot;, &quot;josé&quot;, &quot;maría&quot;]
+
+    mayus(animales)
+    print (animales)
+
+    mayus(personas)
+    print (personas)</code></pre>
+<p>En ambos casos se convierte la lista a mayúsculas usando la función <code>mayus</code>. Esta función se ejecutará dos veces y en cada caso, la variable o parámetro <code>lista</code> se convertirá en una lista diferente. En la primera invocación, <code>lista</code> será realmente <code>animales</code>. Mientras que en la segunda, <code>lista</code> será <code>personas</code>.</p>
+<p>Puedes ver todo este ejemplo completo en el fichero <a href="../src/mayusculas.py">mayusculas.py</a>.</p>
+<p>Podemos declarar funciones con un número mayor de parámetros y en ese caso, en la invocación hemos de respetar el orden de esos parámetros para que la asignación sea correcta:</p>
+<pre><code>def ejemplo(indice, palabra, bool):
+    print (&quot;El indice vale &quot;+str(indice))
+    print (&quot;La palabra vale &quot;+palabra)
+    print (&quot;El booleano vale &quot;+str(bool))
+
+
+// Ejemplos de declaración:
+
+ejemplo (9, &quot;hola&quot;, False)
+ejemplo (-4, &quot;adios&quot;, True)
+ejemplo (321, &quot;buenas&quot;, True)</code></pre>
+<h2 id="valores-de-retorno">Valores de retorno</h2>
+<p>Una función, además de realizar una serie de operaciones puede retornar un valor a quien la invoca. Este valor puede ser útil para saber como ha ido el trabajo de la función o para recuperar un dato que ella ha generado. Este valor retornado puede ser de cualquier tipo: entero, string, tupla, lista, ….</p>
+<p>Para que una función retorne un valor usaremos la instrucción <code>return</code> y hemos de tener en cuenta que cuando esta instrucción se ejecute, la ejecución de la función finaliza. Nunca pongas ninguna instrucción que pertenezca a la función bajo un <code>return</code> pues nunca será ejecutada.</p>
+<p>Veamos un ejemplo. Vamos a crear una instrucción que recibe un número entero como parámetro y construye y retorna una lista de los números pares hasta ese número:</p>
+<pre><code>def construyePares(limite):
+    pares=[]
+    for i in range(1, limite+1):
+        if (i % 2 == 0):
+            pares.append(i)
+            
+    return pares</code></pre>
+<p>Para recuperar el valor retornado por la lista usaremos una variable junto con su invocación de la siguiente manera:</p>
+<pre><code>listaPares = construyePares(10)</code></pre>
+<p>Ahora tendremos una lista llamada <code>listaPares</code> construida dentro de la función y retornada por esta que tiene la forma <code>[2, 4, 6, 8, 10]</code></p>
+<h2 id="ejercicios">Ejercicios</h2>
+<ol type="1">
+<li>Crea una función que reciba un parámetro numérico e informe si es un número primo o no. Úsala para imprimir por pantalla los números primos hasta el 100. <a href="../src/primos.py">Solución</a></li>
+</ol>
+</body>
+</html>
