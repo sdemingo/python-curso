@@ -103,3 +103,28 @@ ejecutado con éxito. Ya eres programador de Python ;)
 
 
 
+## Comentarios en el código
+
+Es posible que durante la lectura de este curso o bien en código Python que
+leamos fuera de aquí veamos que, a veces, en mitad de un código hay frases o
+párrafos en lenguaje natural. Estos textos se llaman "comentarios" y son muy
+usados por lo programadores para incluir textos de aviso, advertencia o
+informativos sobre ciertos fragmentos del programa. En python podemos introducir
+comentarios breves de una sola línea precedidos por el caracter `#` o bien
+comentarios largos de varias líneas indicando el principio y el fin de estos con
+tres dobles comillas: `"""`.
+
+Ambos tipos de comentarios serán ignorados por el intérprete de Python a la hora
+de ejecutar el programa en el que están contenidos.
+
+```
+
+# Este es un ejemplo de comentario corto
+
+"""
+Este es otro ejemplo de comentario de varias 
+líneas que podemos encontrar en un código de ejemplo
+de Python
+"""
+
+```

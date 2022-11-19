@@ -118,6 +118,15 @@ inicialmente, esto es el valor numérico `843`.
     print (entero + int(cadena))
 ```
 
+En Python existe un último tipo de dato curioso que hemos de conocer porque
+puede salirnos al paso en cualquier momento:`None`. Más que un tipo, `None`
+realmente es un valor desconocido. Cuando una variable no se haya inicializado
+correctamente, por ejemplo, contendrá este valor. Si alguna vez nos aparece un
+error indicándonos que algun dato que estamos manejando es `None`, significará
+que ese dato no se ha creado de forma exitosa o, al menos, no tiene la
+apariencia que nosotros esperábamos.
+
+
 ## Operadores 
 
 Los operadores nos permitirán operar con variables. Normalmente usaremos otras
