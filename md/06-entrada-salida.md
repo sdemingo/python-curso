@@ -86,11 +86,11 @@ Si queremos escribir manualmente un salto del línea para separar dos líneas
 hemos de escribir el caracter `\n`. Veamos un ejemplo:
 
 ```
-fichero = open("salida.txt","w")
-fichero.write("Esta será la primera línea del fichero")
-fichero.write("\n")
-fichero.write("Esta será la segunda línea")
-fichero.close()
+    fichero = open("salida.txt","w")
+    fichero.write("Esta será la primera línea del fichero")
+    fichero.write("\n")
+    fichero.write("Esta será la segunda línea")
+    fichero.close()
 ```
 
 
