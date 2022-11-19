@@ -13,6 +13,6 @@
 
 5. [Funciones](05-funciones.html)
 
-6. Entrada/Salida con ficheros
+6. [Entrada/Salida con ficheros](06-entrada-salida.html)
 
 

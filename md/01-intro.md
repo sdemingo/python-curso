@@ -119,12 +119,12 @@ de ejecutar el programa en el que están contenidos.
 
 ```
 
-# Este es un ejemplo de comentario corto
+    # Este es un ejemplo de comentario corto
 
-"""
-Este es otro ejemplo de comentario de varias 
-líneas que podemos encontrar en un código de ejemplo
-de Python
-"""
+    """
+    Este es otro ejemplo de comentario de varias 
+    líneas que podemos encontrar en un código de ejemplo
+    de Python
+    """
 
 ```
