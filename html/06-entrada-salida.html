@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>06-entrada-salida</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+</head>
+<body>
+<h1 id="entradasalida">6. Entrada/Salida</h1>
+<p>Las funciones y operaciones que se agrupan dentro de este capítulo son las que nos permitirán meter datos a nuestros programas y sacar datos de estos. Ya conocemos dos de estas funciones: <code>input</code> y <code>print</code>.</p>
+<p>Vamos ahora a conocer formas para leer y escribir información en ficheros del sistema. Algo que puede sernos muy útil para conseguir que nuestros programas tengan información perdurable sobre el sistema de ficheros.</p>
+<p>Antes de trabajar con ficheros hemos de conocer dos instrucciones que debemos utilizar, antes de empezar a usarlos y tras terminar de utilizar estos:</p>
+<ul>
+<li><p><code>open()</code>: Indica al sistema operativo que quieres utilizar un fichero y de que manera vas a utilizarlo: si vas a leerlo, a escribirlo, etc.</p></li>
+<li><p><code>close()</code>: Indica al sistema que quieres dejar de utilizar un fichero.</p></li>
+</ul>
+<p>La función <code>open</code> nos devuelve una variable de tipo <code>File</code> que nos ayudará a manejar el fichero. Esta variable u objeto guarda en su interior la última posición leída u escrita. Para invocar correctamente <code>open</code> necesitamos, al menos, dos argumentos: uno es la ruta del fichero sobre el sistema (relativa a donde estamos situados o absoluta desde la raíz del sistema) y dos es el modo en el que vamos a trabajar. Hemos de seleccionar uno de los siguientes modos:</p>
+<ul>
+<li><code>r</code>: Abrir el fichero para leerlo.</li>
+<li><code>w</code>: Abrir el fichero para escribirlo. Si este existe, su contenido anterior será eliminado y sino existe, se creará.</li>
+<li><code>a</code>: Abrir el fichero para escribirlo pero añadiendo el contenido a lo que ya teníamos en su interior</li>
+<li><code>+</code>: Abrir el fichero para leerlo y para escribirlo simultáneamente.</li>
+</ul>
+<h2 id="leer-de-ficheros">Leer de ficheros</h2>
+<p>Para leer un fichero con Python debemos primero indicar al sistema nuestra intención para luego proceder a leerlo. Una vez lo hayamos abierto, sobre el fichero podemos realizar diferentes operaciones de lectura. A continuación listo las más comunes:</p>
+<ul>
+<li><p><code>read(n)</code>: Lee del fichero <code>n</code> bytes y retorna esos bytes como un string. Si omites este valor provocas que retorne todo el contenido del fichero en un solo string.</p></li>
+<li><p><code>readline()</code>: Lee una sola línea del fichero.</p></li>
+<li><p><code>readlines()</code>: Lee toda las líneas del fichero y las retorna como una lista de string, donde cada miembro de esta lista es una de estas líneas.</p></li>
+</ul>
+<p>Veamos dos ejemplos. En este primero leeremos todo el fichero de golpe guardándolo en un solo string:</p>
+<pre><code>    fichero = open(&quot;nombre.txt&quot;,&quot;r&quot;)
+    texto = fichero.read()
+    fichero.close()</code></pre>
+<p>Ahora leeremos todo el fichero pero separado en líneas y nos quedaremos solo con las dos últimas:</p>
+<pre><code>    fichero = open(&quot;nombre.txt&quot;, &quot;r&quot;)
+    lineas = fichero.readlines()[-2:]
+    fichero.close()</code></pre>
+<h2 id="escribir-en-ficheros">Escribir en ficheros</h2>
+<p>Para escribir un fichero, las operaciones previas son similares a la lectura. Necesitamos ejecutar <code>open</code> con el modo adecuado. Una vez hecho esto podemos elegir dos funciones para escribir en el:</p>
+<ul>
+<li><code>write(text)</code>: Escribe el string sobre el fichero.</li>
+<li><code>writelines(list)</code>: Escribe en el fichero una lista de strings.</li>
+</ul>
+<p>Si queremos escribir manualmente un salto del línea para separar dos líneas hemos de escribir el caracter <code>\n</code>. Veamos un ejemplo:</p>
+<pre><code>fichero = open(&quot;salida.txt&quot;,&quot;w&quot;)
+fichero.write(&quot;Esta será la primera línea del fichero&quot;)
+fichero.write(&quot;\n&quot;)
+fichero.write(&quot;Esta será la segunda línea&quot;)
+fichero.close()</code></pre>
+</body>
+</html>
